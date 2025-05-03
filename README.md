@@ -1,5 +1,6 @@
 Como executar e testar os códigos, passo-a-passo abaixo:
 
+Todos os arquivos com as atividades estão na branch "MASTER", e não na "MAIN".
 Caso for testar os códigos em um terminal do VScode com o Node.js, o que você pode fazer é usar uma biblioteca chamada prompt-sync que simula o comportamento do prompt() diretamente no Node.js.
 
 Instalar o pacote:
