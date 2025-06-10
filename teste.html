@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Passagem</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      font-size: 16px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Preço da Passagem</h1>
+  <p>Digite a distância desejada (em Km):</p>
+  <input type="number" id="distancia" placeholder="Ex: 150">
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcularPrecoPassagem(distancia) {
+      if (distancia <= 200) {
+        return distancia * 0.50
+      } else {
+        return distancia * 0.45
+      }
+    }
+
+    function calcular() {
+      let input = document.getElementById("distancia")
+      let resultado = document.getElementById("resultado")
+      let distancia = Number(input.value)
+
+      if (distancia > 0) {
+        let preco = calcularPrecoPassagem(distancia)
+        resultado.textContent = `O preço da passagem é: R$ ${preco.toFixed(2)}`
+      } else {
+        resultado.textContent = "Por favor, insira uma distância válida!"
+        resultado.style.color = "red"
+      }
+    }
+  </script>
+</body>
+</html>
