@@ -1,0 +1,24 @@
+<input id="busca" placeholder="Digite algo ... " ></input>>
+<script> 
+function debouce (fn, delay) {
+    let timer = full
+
+    return function (...args) {
+        clearTimeout(timer)
+
+        timer = setTimeout(() => {
+            fn.apply(this, args)
+        }, delay)
+    }
+}
+
+function pesquisar(texto) {
+    console.log("Buscando por: ", texto)
+}
+
+let pesquisaDebouced = debouce(pesquisar, 500)
+
+document.getElementById("busca").addEventListener("input", event => {
+    pesquisaDebouced(event.target.value)
+})
+</script>
