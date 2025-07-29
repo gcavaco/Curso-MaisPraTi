@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 de Junho - Formulários</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte do corpo do documento */
+            background-color: #282735; /* Define a cor de fundo do corpo como cinza claro */
+            margin: 0; /* Remove a margem padrão do corpo */
+            padding: 20px; /* Remove o preenchimento padrão do corpo */
+            display: flex; /* Usa o modelo de layout flexível */
+            justify-content: center; /* Centraliza horizontalmente o conteúdo */
+            align-items: flex-start; /* Centraliza verticalmente o conteúdo */
+            height: 100vh; /* Define a altura do corpo como 100% da altura da janela de visualização */
+            box-sizing: border-box; /* Inclui o preenchimento e a borda no cálculo da largura e altura dos elementos */
+            overflow-y: auto; /* Permite rolagem vertical se o conteúdo exceder a altura da janela de visualização */
+        }
+        #form-container {
+            background-color: rgb(181, 195, 238);
+            border-radius: 8px; /* Adiciona bordas arredondadas ao contêiner do formulário */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao contêiner do formulário */
+            padding: 20px; /* Adiciona preenchimento interno ao contêiner do formulário */            
+        }
+
+        h2 {
+            text-align: center; /* Centraliza o texto do título */
+            font-size: 24px; /* Define o tamanho da fonte do título */
+            color: #333; /* Define a cor do texto do título como cinza escuro */
+            margin-bottom: 20px; /* Adiciona uma margem inferior ao título */
+        }
+
+        label {
+            display: block; /* Exibe o rótulo como um bloco */
+            font-size: 16px; /* Define o tamanho da fonte do rótulo */
+            margin-bottom: 5px; /* Adiciona uma margem inferior ao rótulo */
+            color: #0e0808; /* Define a cor do texto do rótulo como cinza médio */
+        }
+
+        input {
+            padding: 10px; /* Adiciona preenchimento interno aos campos de entrada */
+            font-size: 16px; /* Define o tamanho da fonte dos campos de entrada */
+            margin-bottom: 15px; /* Adiciona uma margem inferior aos campos de entrada */
+            border: 1px solid #ddd; /* Adiciona uma borda cinza clara aos campos de entrada */
+            border-radius: 5px; /* Adiciona bordas arredondadas aos campos de entrada */
+        }
+
+        .input-group {
+            margin-bottom: 15px; /* Adiciona uma margem inferior aos grupos de entrada */
+        }
+
+        .input-group label {
+            margin-bottom: 3px; /* Adiciona uma margem inferior aos rótulos dentro dos grupos de entrada */
+        }
+
+        .input-group .radio-group, .input-group .checkbox-group {
+            display: flex; /* Usa o modelo de layout flexível para os grupos de entrada */
+            gap: 20px; /* Adiciona um espaço entre os elementos dentro do grupo */
+        }
+
+        button {
+            background-color: #4caf50; /* Define a cor de fundo do botão como verde */
+            color: white; /* Define a cor do texto do botão como branco */
+            cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+            border: none; /* Remove a borda padrão do botão */
+            font-size: 18px; /* Define o tamanho da fonte do botão */
+            padding: 10px; /* Adiciona preenchimento interno ao botão */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Muda a cor de fundo do botão quando o mouse passa por cima */
+        }
+
+        input, select, textarea, button {
+            padding: 10px; /* Adiciona preenchimento interno aos campos de entrada, seleção, área de texto e botão */
+            font-size: 16px; /* Define o tamanho da fonte dos campos de entrada, seleção, área de texto e botão */
+            margin-bottom: 6px; /* Adiciona uma margem inferior aos campos de entrada, seleção, área de texto e botão */
+            border: 1px solid #ddd; /* Adiciona uma borda cinza clara aos campos de entrada, seleção, área de texto e botão */
+            border-radius: 10px; /* Adiciona bordas arredondadas aos campos de entrada, seleção, área de texto e botão */
+        }
+    </style>
+</head>
+<body>
+    <div id="form-container" style="border: 1px solid red">
+        <h2>Formulário de Cadastro</h2>
+        <form>
+            <div class="input-group">
+                <label>Nome Completo:</label> <!-- Rótulo para o campo de entrada-->
+                <input type="text"> <!-- Campo de entrada de texto -->
+            </div>
+
+            <div class="input-group">
+                <label>E-mail</label> 
+                <input type="email"> 
+            </div>
+
+            <div>
+                <label>Senha</label> 
+                <input type="password" placeholder="Digite sua senha">
+            </div>
+            
+            <div class="input-group">
+                <label>Telefone</label>
+                <input type="tel" placeholder="Digite seu telefone">
+            </div>
+            
+            <div class="input-group">
+                <label>Website</label>
+                <input type="url">
+            </div>
+
+            <div class="input-group">
+                <label>Data de Nascimento</label>
+                <input type="date">
+            </div>
+
+            <div class="input-group">
+                <label>Hora</label>
+                <input type="time">
+            </div>
+
+            <div class="input-group">
+                <label>Pesquisa</label>
+                <input type="search">
+            </div>
+
+            <div class="input-group">
+                <label>Quantidade</label>
+                <input type="number">
+            </div>
+
+            <div class="input-group">
+                <label>Gênero</label>
+                <div class="radio-group"></div>
+                <label for="male">
+                    <input type="radio" value="male" name="gender">Masculino
+                </label>
+                <label for="female">
+                    <input type="radio" value="female" name="gender">Feminino
+                </label>
+                <label for="other">
+                    <input type="radio" value="other" name="gender">Outro
+                </label>
+            </div>
+
+            <div class="input-group">
+                <label>Preferências:</label>
+                <div class="checkbox-group">  
+                    <label for="newsletter">
+                        <input type="checkbox" name="newsletter">Gostaria de assinar a Newsletter
+                    </label>
+                        <label for="updates">
+                        <input type="checkbox" name="newsletter">Gostaria de receber atualizações
+                    </label>
+                </div>
+
+            </div>
+            <div class="input-group">
+                <label for="resume">Carregar Currículo:</label>
+                <input type="file" name="resume">
+            </div>
+            
+            <div class="input-group">
+                <label for="city">Cidade:</label>
+                <select name="city">
+                    <option value="rs">Jaguarão</option>
+                    <option value="sp">Sorocaba</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="rs">Tapes</option>
+                    <option value="pe">Olinda</option>
+                    <option value="rs">Parobé</option>
+                    <option value="rs">Bagé</option>
+                    <option value="pb">João Pessoa</option>
+                    <option value="ba">Salvador</option>
+                    <option value="ba">Xique-Xique</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="message" placeholder>Mensagem</label>
+                <textarea name="message" placeholder="Deixe sua Mensagem"></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

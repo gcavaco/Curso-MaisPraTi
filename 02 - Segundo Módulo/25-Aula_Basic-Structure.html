@@ -1,0 +1,240 @@
+<!DOCTYPE html> <!--Declaração do tipo de documento HTML5 --> 
+<html lang="pt-br"> <!-- Define o idioma do documento como português do Brasil-->
+<!--Comentário: Este é um comentário HTML, não será exibido no navegador-->
+<head> <!-- Cabeçalho do documento HTML -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Desenvolvimento Web, HTML, CSS e JS">
+    <meta name="author" content="Batman">
+    <title>Primeira Aula</title> <!-- Título da página que aparece na aba do navegador -->
+    <style>
+        a {
+            font-weight: bold; /* Define o peso da fonte dos links como negrito */
+            color: green; /* Define a cor dos links como verde */
+            border: 1px solid; /* Adiciona uma borda preta de 1 pixel aos links */
+            text-decoration: none; /* Remove o sublinhado dos links */
+        }
+
+        a:hover {
+            background-color: red; /* Muda a cor de fundo dos links para vermelho quando o mouse passa por cima */
+        }
+
+        p {
+            background-color: #ccc; /* Define a cor de fundo dos parágrafos como cinza claro */
+            color: #9f1cba; /* Define a cor do texto dos parágrafos como cinza claro */
+        }
+
+        ul {
+            list-style: square; /* Define o estilo da lista não ordenada como quadrado */
+            border: 1px dashed; /* Adiciona uma borda preta tracejada à lista */
+        }
+
+        ol {
+            list-style-type: decimal-leading-zero;  /* Define o estilo da lista ordenada com números com zero à esquerda */
+        }
+
+        table {
+            border: 1px solid; /* Adiciona uma borda preta de 1 pixel à tabela */
+        }
+
+        th, td {
+            border: 1px solid; /* Adiciona uma borda preta de 1 pixel à tabela */
+        }
+
+        th {
+            background-color: aqua; /* Define a cor de fundo dos cabeçalhos da tabela como cinza claro */
+        }
+    </style>
+</head>
+<body> <!-- Corpo do documento HTML, onde o conteúdo visível é colocado -->
+    <header> <!-- Cabeçalho do documento -->
+        <nav> <!-- Navegação do site -->
+            <a href="home.html">Home</a> <!-- Link para a página inicial -->
+            <a href="home.html">Sobre mim</a>
+        </nav>
+
+        <h1>Aprendendo HTML na +PraTI</h1> <!-- Título principal da página -->
+        <h2>Aprendendo HTML na +PraTI</h2> <!-- Subtítulo da página -->
+        <h3>Aprendendo HTML na +PraTI</h3> 
+        <h4>Aprendendo HTML na +PraTI</h4> 
+    </header>
+
+    <hr> <!-- Linha horizontal para separar seções -->
+    
+    <section> <!-- Seção do documento -->
+
+    <p style="color: blue;"> <!-- Parágrafo com estilo inline -->
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        <code>&lt;header&gt;</code> enim ad minim veniam, quis nostrud exercitation ullamco 
+        laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, <sup>dolor</sup>consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        <sub>Subscrito</sub> do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    </section>
+
+    <hr>
+
+    <section>
+        <p>Veja a Sigla: <abbr title="Javascript Object Notation">JSON</abbr></p>
+
+        <blockquote cite="https://wikipedia.com">
+            A Web é construída por todos nós.
+        </blockquote>
+        <p>Como disse Sócrates: <q>Só sei que nada sei</q></p>
+        <p>Porque Deus odeia o <strong>Vasco</strong>?</p>
+        <p>Porto Alegre possui dois time: Grêmio e <s>Inter</s> São José</p>
+        <p>Geralt de Rivia é um <u>grande</u> <em>Bruxo</em></p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Menu Principal</h2>
+        <ul> <!-- Lista não ordenada -->
+            <li>Home</li> <!-- Item da lista -->
+            <li>Contato</li>
+        </ul>
+
+        <h3>Perguntas frequentes:</h3>
+        <ol> <!-- Lista ordenada -->
+            <li>O que faz o HTML?</li>
+            <li>Qual a função do Dev Frontend?</li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Catálogo de Preços</h2>
+        <table> <!-- Tabela para exibir dados -->
+            <tr> <!-- Linha da tabela -->
+                <th>Produto</th> <!-- Cabeçalho da coluna -->
+                <th>Descrição</th> 
+                <th>Preço</th>
+            </tr>
+            <tr> 
+                <td>Samsung Galaxy Pocket</td> <!-- Célula da tabela -->
+                <td>Celular com tela OLED</td>
+                <td>R$ 60.00</td>
+            </tr>
+            <tr>
+                <td>TekPix</td>
+                <td>Câmera mais vendida do Brasil</td>
+                <td>R$ 160.00</td>
+            </tr>
+            <tr>
+                <td>Oba Phone</td>
+                <td>Endrew Indica</td>
+                <td>R$ 100.00</td>
+            </tr>   
+            <tr>
+                <td colspan="3">Total: R$ 320.00</td> <!-- Célula que ocupa 3 colunas -->
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Registro de Usuário</h2>
+        <form action=""> <!-- Formulário para registro de usuário -->
+            <label>Login:</label> <!-- Rótulo para o campo de entrada -->
+            <input type="text"> <!-- Campo de entrada de texto -->
+            <br> <!-- Quebra de linha -->
+            <br>
+            <label>Senha</label> 
+            <input type="password">
+        </form>
+    </section>
+
+    <hr>
+
+    <footer>
+        <h2>Rodapé</h2>
+        &lt;Desenvolvendo para a Web&gt;
+        <p>Desenvolvido por Luís Gustavo &copy; 2025</p>
+    </footer>
+
+    <hr>
+
+    <section>
+        <h2>Links Externos</h2>
+        <table>
+            <ul>
+        <li><a href="https://www.google.com" target="_blank">Google</a></li> <!-- Link para o Google -->
+        <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li> <!-- Link para o YouTube -->
+        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li> <!-- Link para o Facebook -->
+        </ul>
+        </table>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Cadastro de Livros para <em>Doação</em></h2>
+        <form> <!-- Formulário para cadastro de livros -->
+            <label>Livro</label>
+            <input type="text" name="livro" placeholder="Digite o nome do livro">
+            <br>
+            <label>Autor</label>
+            <input type="text" name="autor" placeholder="Digite o nome do autor">
+            <br>
+            <label>Gênero</label>
+            <select name="genero"> <!-- Menu suspenso para seleção de gênero -->
+                <option value="ficcao">Ficção</option>
+                <option value="nao-ficcao">Não Ficção</option>
+                <option value="fantasia">Fantasia</option>
+                <option value="aventura">Aventura</option>
+                <option value="romance">Romance</option>
+                <option value="biografia">Biografia</option>
+            </select>
+        </form>
+    </section>
+
+    <hr>
+
+    <section>
+        <h1>Minha Primeira Tabela</h1>
+        <style> /* Estilos CSS para a tabela */
+            table, th, td {
+                border: 2px solid black; /* Define a borda da tabela, cabeçalhos e células */
+                border-collapse: collapse; /* Colapsa as bordas para evitar duplicação */
+            }
+        </style>
+        <hr>
+        <table>
+            <tr>
+                <th>Livro</th>
+                <th>Autor</th>
+                <th>Gênero</th>
+            </tr>
+            <tr>
+                <td>Hobbit</td>
+                <td>J.R.R. Tolkien</td>
+                <td>Fantasia</td>
+            </tr>
+            <tr>
+                <td>1984</td>
+                <td>George Orwell</td>
+                <td>Ficção Científica</td>
+            </tr>
+            <tr>
+                <td>Dom Casmurro</td>
+                <td>Machado de Assis</td>
+                <td>Romance</td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>

@@ -1,0 +1,213 @@
+main {
+    margin-left: 200px; /* Empurra o conteúdo principal para a direita */
+    /* Adicione uma cor de fundo ao main para garantir que ele cubra o que está por baixo */
+    background-color: white; /* Ou qualquer cor que você queira para o fundo do seu conteúdo */
+    min-height: 100vh; /* Opcional: Garante que o main tenha pelo menos a altura da tela */
+    box-sizing: border-box; /* Boa prática para padding/bordas */
+    flex: 1; /* Permite que o main ocupe o espaço restante */
+    padding: 30px; /* Espaçamento interno para o conteúdo do main */
+}
+
+h1 {
+    color: blue;
+    font-size: 32px;
+}
+
+p {
+    color: gray;
+    line-height: 1.5;
+}
+
+.destaque {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.destaque-azul {
+    background-color: pink;
+    font-weight: bold;
+}
+
+#cabecalho {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+}
+
+ul li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li.importante {
+    color: red;
+}
+
+a:hover {
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+#titulo-boca {
+    color: yellow;
+    font-size: 24px;
+    font-style: bold;
+}
+
+.diferente {
+    color: black;
+}
+
+#unico {
+    color: navy;
+}
+
+div {
+    color: blue;
+    margin: 10px;
+    border: 1px solid red;
+}
+
+div p {
+    border: inherit;
+}
+
+h1 + p {
+    color: green;
+}
+
+h1 ~ p {
+    font-style: italic;
+}
+
+h2 > a {
+    color: purple;
+}
+
+aside {
+    position: fixed; /* Cores mais neutras para um visual profissional */
+    background-color: #2c3e50; /* Um tom de azul marinho escuro ou cinza carvão */
+    color: #ecf0f1; /* Cor de texto claro para contraste */
+    padding: 25px 20px; /* Aumenta um pouco o padding vertical para mais respiro */
+    width: 220px; /* Um pouco mais largo para acomodar melhor os itens */
+    border-radius: 0; /* Geralmente, menus fixos de lateral não têm bordas arredondadas para ocupar toda a extremidade */
+    top: 0;
+    left: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    z-index: 10; /* Garante que o menu fique acima de outros elementos */
+    /* Adiciona uma sombra sutil para dar profundidade */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidade */ 
+}
+
+aside h2 {
+    color: red; /* Um tom de laranja ou amarelo para o título, destacando-o */
+    font-size: 28px; /* Título um pouco maior */
+    margin-bottom: 30px; /* Mais espaço abaixo do título */
+    text-align: center; /* Centraliza o título no menu */
+    text-transform: uppercase; /* Deixa o título em maiúsculas */
+    letter-spacing: 1px; /* Um pouco de espaçamento entre as letras */
+}
+
+aside ol { /* A tag é <ol>, não <ul>, conforme seu HTML */
+    list-style-type: none; /* Remove os marcadores (você já tinha isso, mas é bom reforçar) */
+    padding: 0;
+    margin: 0; /* Remove margem padrão da lista */
+}
+
+aside ol li {
+    margin: 0; /* Garante que não haja margens indesejadas */
+}
+
+aside ol li a {
+    display: block; /* Faz com que o link ocupe toda a largura do item da lista, tornando a área clicável maior */
+    color: #ecf0f1; /* Cor padrão do link, claro para contrastar com o fundo escuro */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    padding: 12px 10px; /* Padding interno para os links, dando espaço clicável */
+    font-size: 18px; /* Tamanho da fonte dos links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para efeitos hover */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Uma fonte mais moderna */
+}
+
+aside ol li a:hover {
+    background-color: #34495e; /* Fundo ligeiramente mais claro no hover */
+    color: #ffffff; /* Cor do texto no hover */
+    text-decoration: underline; /* Opcional: Adiciona sublinhado no hover para indicar interatividade */
+}
+
+/* Estilos para a Tabela */
+table {
+    width: 90%; /* Define a largura da tabela, pode ser 100% ou um valor fixo/max-width */
+    max-width: 800px; /* Limita a largura máxima para não ficar muito esticada em telas grandes */
+    margin: 30px auto; /* Centraliza a tabela na página e adiciona margem superior/inferior */
+    border-collapse: collapse; /* Colapsa as bordas das células em uma única linha, fica mais limpo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada e suave */
+    border-radius: 8px; /* Arredonda as bordas da tabela inteira */
+    overflow: hidden; /* Garante que a sombra e o border-radius sejam aplicados corretamente nas bordas colapsadas */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Uma fonte mais profissional */
+    color: #333; /* Cor de texto mais suave */
+}
+
+/* Cabeçalho da Tabela */
+thead {
+    background-color: #34495e; /* Fundo escuro para o cabeçalho */
+    color: #ecf0f1; /* Texto claro para contraste */
+}
+
+th {
+    padding: 15px 20px; /* Mais padding no cabeçalho */
+    text-align: left;
+    font-weight: bold; /* Garante que o texto do cabeçalho seja negrito */
+    text-transform: uppercase; /* Deixa o texto em maiúsculas para destaque */
+    letter-spacing: 0.5px; /* Um pequeno espaçamento entre letras */
+    border: none; /* Remove a borda para o cabeçalho, já que o border-collapse cuida disso */
+}
+
+/* Estilo para as Células de Dados e Cabeçalhos */
+td {
+    padding: 12px 20px; /* Padding ajustado para células de dados */
+    text-align: left;
+    border-bottom: 1px solid #eee; /* Borda inferior mais clara para as células de dados */
+}
+
+/* Efeito de Zebrado (Striping) para Melhor Leitura */
+tbody tr:nth-child(even) { /* Seleciona linhas pares dentro do tbody */
+    background-color: #f9f9f9; /* Uma cor de fundo muito leve para linhas pares */
+}
+
+/* Efeito de Hover nas Linhas */
+tbody tr:hover {
+    background-color: #e0f2f7; /* Cor de fundo mais clara ao passar o mouse */
+    cursor: pointer; /* Muda o cursor para indicar que a linha é interativa */
+    transition: background-color 0.3s ease; /* Animação suave no hover */
+}
+
+/* Estilo para a última linha (Total) */
+/* Células dentro da última linha */
+tbody tr:last-child td {
+    border-bottom: none; /* Remove a borda inferior da última linha */
+    font-weight: bold; /* Deixa o total em negrito */
+    background-color: #e6e6e6; /* Fundo diferente para o total */
+    text-align: center; /* Centraliza o texto do total */
+    padding: 15px 20px; /* Um pouco mais de padding */
+}
+
+/*
+    Seletor inline: 1000
+    Seletor de ID: 100
+    Seletor de classe: 10
+    Seletor de tipo: 1
+
+    a ordem de precedência é Importante:
+    inline > ID > classe > tipo
+*/
